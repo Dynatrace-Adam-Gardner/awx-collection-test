@@ -1,0 +1,14 @@
+- name: Install OA and Create Files
+  hosts: windows
+  collections:
+    - dynatrace.oneagent
+  vars:
+    oneagent_download_dir: /tmp
+    oneagent_version: latest
+    oneagent_install_args:
+      - –-set-host-group=My.HostGroup_123-456
+      - --set-infra-only=true
+      - --set-host-property=Foo=Bar
+  tasks:
+    - import_role:
+        name: oneagent
