@@ -1,3 +1,6 @@
-  
+---  
 collections:
 - name: ansible.windows
+- name: https://github.com/Dynatrace-Adam-Gardner/Dynatrace-OneAgent
+  type: git
+  version: 793058cd4944a64a9d0275f94aa33e4da7776a47
